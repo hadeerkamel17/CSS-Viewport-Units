@@ -1,0 +1,59 @@
+/* One vw is equal to 1% of the viewport width.if you have a div element with a width of 50vw,
+ this means that the div will be 50% of the width of the viewport.
+  If the viewport is 1000 pixels wide, the div will be 500 pixels wide */
+  /* One vh is equal to 1% of the viewport height.
+  If your viewport height is 300px then this will set the height of the element with the class "header" to 30px. */
+header {
+    width: 50vw;
+    height: 10vh;
+}
+/* vmin stands for viewport minimum and vmax stands for viewport maximum. These are units of measurement that refer to the smaller or larger dimension of the viewport, respectively.
+
+One vmin is equal to 1% of the smaller dimension of the viewport (either the width or the height, whichever is smaller).
+One vmax is equal to 1% of the larger dimension of the viewport (either the width or the height, whichever is larger).
+
+For example, if you have a div element with a width of 50vmin, this means that the div will be 50% of the smaller dimension of the viewport.
+ If the viewport is 1000 pixels wide and 600 pixels tall,
+ the div will be 300 pixels wide (50% of the smaller dimension, which is the height). */
+main {
+    width: 50vmin;
+}
+/* This will set the width of the element with the class "section" to 75% of the larger dimension of the viewport.
+
+ */
+section {
+    width: 75vmax;
+}
+
+/* vi stands for Viewport Inline, 1% of the viewport’s size in the inline direction.
+vi represents the inline direction of your document. 
+A horizontal writing direction corresponds with the width of your viewport, 
+and a vertical writing direction represents the height of your viewport.
+The easy way to remember the approach is that it is in the same direction as your text. */
+.container {
+    writing-mode: horizontal-tb;
+    width: 30vi;
+}
+
+#paragraph {
+    writing-mode: vertical-lr;
+    height: 30vi;
+}
+
+/*
+vb is the opposite of vi and stands for Viewport Block, 
+1% of the viewport’s size in the block direction.
+In a horizontal writing direction,
+vi will correspond with the viewport height,
+and in a vertical document, this will represent the width of your viewport.
+An easy to remember this unit is to remember that the block direction will always be the direction block elements (two divs) stack on top of one another. */
+
+
+.Services {
+    writing-mode: horizontal-tb;
+    width: 30vb;
+}
+#part {
+    writing-mode: vertical-rl;
+    height: 30vb;
+}
